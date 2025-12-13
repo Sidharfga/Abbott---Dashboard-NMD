@@ -1,0 +1,58 @@
+/* Scope styles to ONLY this component's table */
+.upskill-table-wrapper {
+
+  width: 100%;
+  margin-top: 15px;
+  overflow-x: auto;
+
+  .styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    background: #fff;
+    border: 1px solid #dce3ea;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  thead tr {
+    background-color: #0288D1;
+    color: white !important;
+    font-weight: 600;
+    font-size: 15px;
+    height: 48px;
+    letter-spacing: 0.4px;
+  }
+
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  tbody tr:nth-of-type(odd) {
+    background-color: #f7fbff;
+  }
+
+  tbody tr:nth-of-type(even) {
+    background-color: #e8f4ff;
+  }
+
+  tbody tr:hover {
+    background-color: #d0ecff;
+    cursor: pointer;
+  }
+}
+
+/* Fix mat-card height layout */
+.upskilling-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 420px;
+}
+
+.mat-card{
+    height: 390px;
+}

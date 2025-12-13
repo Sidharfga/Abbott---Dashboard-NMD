@@ -1,0 +1,45 @@
+<mat-card>
+  <mat-card-content>
+    <div class="chartWrapper">
+      <div class="chartHeader">
+        <div class="row align-items-baseline">
+          <div class="col-7">
+            <h3>{{ upskilling }}</h3>
+          </div>
+          <div class="col-5">
+            <label> Quarters &nbsp;</label>
+            <select (change)="changeGraph()" [(ngModel)]="month">
+              <option *ngFor="let food of allMonths" [value]="food.Month">
+                {{ food.Month }}
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHART -->
+      <div *ngIf="showChart" id="chartdiv4" style="width: 100%; height: 50vh"></div>
+
+      <!-- TABLE -->
+      <div *ngIf="showTable" class="upskill-table-wrapper">
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>Training</th>
+        <th>Planned</th>
+        <th>Completed</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of trainingTable">
+        <td>{{ row.Training }}</td>
+        <td>{{ row.Planned }}</td>
+        <td>{{ row.Completed }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+    </div>
+  </mat-card-content>
+</mat-card>

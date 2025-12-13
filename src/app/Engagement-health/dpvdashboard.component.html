@@ -1,0 +1,140 @@
+<div class="chartHeader">
+  <div class="row align-items-baseline">
+    <div class="row"></div>
+    <div class="col-6">
+      <mat-card class="nobg">
+        <div class="row">
+          <div class="col-7 pageTitle">Engagement Health &nbsp;</div>
+
+          <div class="col-5">
+            <label for="fiscal-quarters"> Quarters &nbsp;</label>
+            <select
+              id="fiscal-quarters"
+              (change)="changeGraph()"
+              [(ngModel)]="month"
+            >
+              <option
+                *ngFor="let food of allMonths; let i = index"
+            
+                [value]="food.Month"
+              >
+                {{ food.Month }}
+              </option>
+            </select>
+          </div>
+          <br />
+          <br />
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-6">Please choose a program to view the details</div>
+          <div class="col-6 col6">
+            <div class="flex-container">
+              <span class="gl"></span>
+              <span class="fl"> On Track</span>
+            </div>
+            <div class="flex-container">
+              <span class="rl"></span>
+              <span class="fl"> Need Attention&nbsp;&nbsp;</span>
+            </div>
+            <div class="flex-container">
+              <span class="grl"></span>
+              <span class="fl"> Off Track</span>
+            </div>
+          </div>
+        </div>
+        <br />
+        <table class="table-striped table">
+          <thead>
+            <td class="blue-bg1">Projects</td>
+
+            <td class="blue-bg1">Budget</td>
+            <td class="blue-bg1">Resources</td>
+            <td class="blue-bg1">Schedule</td>
+            <td class="blue-bg1">Overall Health</td>
+          </thead>
+          <tr
+            *ngFor="let item of healthIndicator; let i = index"
+            [class.highlighted]="item.highlighted"
+          >
+            <ng-container *ngIf="item.key === month">
+              <td class="cursor" (click)="showHide(i, item.value1)">
+                <span class="breakWord" [innerHTML]="item.value1"> </span>
+              </td>
+              <td>
+                <span
+                  class="greenCircle"
+                  *ngIf="item.value2 == 'As per projection'"
+                ></span>
+                <span
+                  class="redCircle"
+                  *ngIf="item.value2 != 'As per projection'"
+                ></span>
+              </td>
+              <td>
+                <span
+                  class="greenCircle"
+                  *ngIf="item.value3 == 'No Open positions'"
+                ></span>
+                <span
+                  class="redCircle"
+                  *ngIf="item.value3 != 'No Open positions'"
+                ></span>
+              </td>
+              <td>
+                <span
+                  class="greenCircle"
+                  *ngIf="item.value4 == 'As per Schedule'"
+                ></span>
+                <span
+                  class="redCircle"
+                  *ngIf="item.value4 != 'As per Schedule'"
+                ></span>
+              </td>
+              <td>
+                <span class="greenCircle" *ngIf="item.value5 == 'Green'"></span>
+                <span class="redCircle" *ngIf="item.value5 != 'Green'"></span>
+              </td>
+            </ng-container>
+          </tr>
+        </table>
+      </mat-card>
+
+       </div>
+    <div class="col-6">
+      
+
+      <mat-card *ngIf="results?.length <= 0" 
+        >Please choose on any program to show details here</mat-card
+      >
+     <mat-card *ngIf="results?.length > 0 && shouldShowAccomplishments()" class="lightBlue">
+  <div class="col-4 pageTitle">Accomplishments</div>
+  <br />
+  <div *ngFor="let item of results">
+    <table class="table table-bordered">
+      <ng-container>
+        <tr *ngFor="let value of item.values">
+          <td style="white-space: pre-line">{{ value.value7 }}</td>
+        </tr>
+      </ng-container>
+    </table>
+  </div>
+</mat-card>
+      <br />
+      <mat-card *ngIf="results?.length > 0" class="wblue">
+        <div class="col-4 pageTitle">Risks/Issues</div>
+        <br />
+        <div *ngFor="let item of results">
+          <table class="table table-bordered">
+            <ng-container>
+              <tr *ngFor="let value of item.values">
+                <td style="white-space: pre-line">{{ value.value8 }}</td>
+              </tr>
+            </ng-container>
+          </table>
+        </div>
+      </mat-card>
+      
+    </div>
+  </div>
+</div>
