@@ -15,7 +15,7 @@ export class TrainingComplianceComponent implements OnInit {
   healthIndicator: any;
   allMonths: any;
   allObjects: any;
-  month = "Q3-25";
+  month = "Q4-25";
   ranges: any;
   totalCount: any = 0;
   constructor(private xls: XlsApi) {}

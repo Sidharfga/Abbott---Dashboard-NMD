@@ -24,7 +24,7 @@ export class DpvdashboardComponent implements OnInit {
   constructor(private xls: XlsApi) {}
 
   ngOnInit() {
-    this.month = sessionStorage.getItem('Q3-25') || 'Q3-25';
+    this.month = sessionStorage.getItem('Q4-25') || 'Q4-25';
     
     this.loadData();
     this.changeGraph();

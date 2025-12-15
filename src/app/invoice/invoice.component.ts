@@ -15,10 +15,15 @@ export class InvoiceComponent implements OnInit {
   groups: any;
   item: any;
   datas: any;
-  selectedOptions: string = 'Q3-25';
+  selectedOptions: string = 'Q4-25';
 
 
- 
+ quarters = [
+  'Q1-23','Q2-23','Q3-23','Q4-23',
+  'Q1-24','Q2-24','Q3-24','Q4-24',
+  'Q1-25','Q2-25','Q3-25','Q4-25'
+];
+
 
   constructor(private xls: XlsApi) {}
 

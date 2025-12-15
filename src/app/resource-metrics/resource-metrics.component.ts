@@ -20,7 +20,7 @@ export class ResourceMetricsComponent implements OnInit {
   allMonths: any;
   allObjects: any;
   totalCount: any = 0;
-  month = "Q3-25";
+  month = "Q4-25";
   formattedChartData: any;
   constructor(private xls: XlsApi) {}
 

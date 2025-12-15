@@ -1,15 +1,23 @@
 <div class="row">
   <div class="col-8"></div>
   <div class="col-4" style="text-align: end">
-    <label> Quarters &nbsp;</label>
-    <select (change)="changeGraph()" [(ngModel)]="month">
-      <option
-        *ngFor="let food of allMonths; let i = index"
-        [value]="food.Month"
-      >
-        {{ food.Month }}
-      </option>
-    </select>
+
+    <label for="fiscal-quarters" class="quarter-text">
+    Quarters &nbsp;
+  </label>
+    <mat-form-field appearance="outline" class="quarter-field">
+  <mat-select
+    [(ngModel)]="month"
+    (selectionChange)="changeGraph()"
+    panelClass="quarter-panel">
+
+    <mat-option *ngFor="let food of allMonths" [value]="food.Month">
+      {{ food.Month }}
+    </mat-option>
+
+  </mat-select>
+</mat-form-field>
+
   </div>
 </div>
 <div class="row pageContent">

@@ -17,7 +17,7 @@ export class ResourceUtilisationFunctionsComponent implements OnInit {
   allMonths: any;
   healthIndicator: any;
   allObjects: any;
-  month = 'Q3-25';
+  month = 'Q4-25';
   totalCount: any = 0;
   constructor(private xls: XlsApi) {}
 

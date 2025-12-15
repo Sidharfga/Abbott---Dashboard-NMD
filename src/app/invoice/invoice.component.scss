@@ -139,3 +139,124 @@ select {
     left: -4px;
     margin: auto;
 }
+
+.center-text {
+  text-align: center;
+  vertical-align: middle;
+   /* optional */
+}
+
+
+
+
+
+
+/* ================================
+   QUARTERS DROPDOWN – FULL SCSS
+   ================================ */
+
+/* Mat form field container */
+.quarter-field {
+  width: 120px;
+}
+
+/* Input box height & spacing */
+::ng-deep .quarter-field .mat-mdc-text-field-wrapper {
+  height: 44px;
+}
+
+::ng-deep .quarter-field .mat-mdc-form-field-infix {
+  min-height: 44px;
+  padding: 10px 12px !important;
+}
+
+/* Label */
+::ng-deep .quarter-field .mat-mdc-floating-label {
+  font-size: 13px;
+}
+
+/* Selected value text */
+::ng-deep .quarter-field .mat-mdc-select-value {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+/* Dropdown panel */
+::ng-deep .quarter-panel {
+  margin-top: 35px;                 /* open below field */
+  max-height: 220px;
+  padding: 0;
+  overflow-y: auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Fix option layout */
+::ng-deep .quarter-panel .mat-mdc-option {
+  height: 40px;
+  min-height: 40px;
+  padding: 0 16px !important;
+  display: flex;
+  align-items: center;             /* vertical center */
+}
+
+/* Option text alignment */
+::ng-deep .quarter-panel .mdc-list-item__primary-text {
+  line-height: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove extra MDC spacing */
+::ng-deep .quarter-panel .mdc-list-item__content {
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+}
+
+/* Disable ripple / jump */
+::ng-deep .quarter-panel .mdc-list-item__ripple {
+  display: none;
+}
+
+/* Prevent auto scroll jump */
+::ng-deep .quarter-panel .mat-mdc-option {
+  scroll-margin-top: 0 !important;
+}
+
+/* Scrollbar */
+::ng-deep .quarter-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+::ng-deep .quarter-panel::-webkit-scrollbar-thumb {
+  background-color: #9e9e9e;
+  border-radius: 4px;
+}
+
+::ng-deep .quarter-panel::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Outline border */
+::ng-deep .quarter-field .mdc-notched-outline__leading,
+::ng-deep .quarter-field .mdc-notched-outline__notch,
+::ng-deep .quarter-field .mdc-notched-outline__trailing {
+  border-color: #d0d0d0;
+}
+
+/* Focus border */
+::ng-deep .quarter-field.mat-focused
+.mdc-notched-outline__leading,
+::ng-deep .quarter-field.mat-focused
+.mdc-notched-outline__notch,
+::ng-deep .quarter-field.mat-focused
+.mdc-notched-outline__trailing {
+  border-color: #3f51b5;
+}
+
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}

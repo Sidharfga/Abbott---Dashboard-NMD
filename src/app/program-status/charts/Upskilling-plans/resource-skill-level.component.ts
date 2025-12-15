@@ -13,7 +13,7 @@ export class ResourceSkillLevelComponent implements OnInit, OnDestroy {
 
   private chart4: am4charts.XYChart | null = null;
 
-  month = "Q4-25";
+  month = "Q1-26";
   showChart = true;
   showTable = false;
   trainingTable: any[] = [];
@@ -59,11 +59,15 @@ export class ResourceSkillLevelComponent implements OnInit, OnDestroy {
     const cutoffQuarter = 3;
     const cutoffYear = 25;
 
-    this.upskilling = selectedMonth === "Q4-25"
+    this.upskilling = selectedMonth === "Q1-26"
       ? "Upskilling Plans"
       : "Skills Upgraded";
 
-    if (yNum >= cutoffYear && qNum >= cutoffQuarter) {
+    if (
+  yNum > cutoffYear ||
+  (yNum === cutoffYear && qNum >= cutoffQuarter)
+) {
+
 
       this.showTable = true;
       this.showChart = false;

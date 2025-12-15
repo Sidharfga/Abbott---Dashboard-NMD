@@ -7,25 +7,33 @@
           <div class="col-7 pageTitle">Engagement Health &nbsp;</div>
 
           <div class="col-5">
-            <label for="fiscal-quarters"> Quarters &nbsp;</label>
-            <select
-              id="fiscal-quarters"
-              (change)="changeGraph()"
-              [(ngModel)]="month"
-            >
-              <option
-                *ngFor="let food of allMonths; let i = index"
-            
-                [value]="food.Month"
-              >
-                {{ food.Month }}
-              </option>
-            </select>
+            <div class="quarter-container">
+  <label for="fiscal-quarters" class="quarter-text">
+    Quarters &nbsp;
+  </label>
+
+  <mat-form-field appearance="outline" class="quarter-field">
+    
+    <mat-select
+      id="fiscal-quarters"
+      [(ngModel)]="month"
+      (selectionChange)="changeGraph()"
+      panelClass="quarter-panel"
+      disableOptionCentering>
+
+      <mat-option *ngFor="let food of allMonths" [value]="food.Month">
+        {{ food.Month }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+
+
           </div>
-          <br />
-          <br />
+         
         </div>
-        <br />
+    
         <div class="row">
           <div class="col-6">Please choose a program to view the details</div>
           <div class="col-6 col6">

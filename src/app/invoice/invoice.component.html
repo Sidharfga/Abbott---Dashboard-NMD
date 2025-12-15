@@ -31,24 +31,28 @@
 
           <div class="col-3" style="float: right; text-align: end">
             <label for="fiscal-quarters"> Quarters &nbsp;</label>
+
             
-            <select [(ngModel)]="selectedOptions">
-              <option>Q1-23</option>
-              <option>Q2-23</option>
-              <option>Q3-23</option>
-              <option>Q4-23</option>
-              <option>Q1-24</option>
-              <option>Q2-24</option>
-              <option>Q3-24</option>
-              <option>Q4-24</option>
-              <option>Q1-25</option>
-              <option>Q2-25</option>
-              <option>Q3-25</option>
-            </select>
+           <mat-form-field appearance="outline" class="quarter-field">
+  
+
+  <mat-select
+    [(ngModel)]="selectedOptions"
+    panelClass="quarter-panel"
+    disableOptionCentering>
+    
+    <mat-option *ngFor="let q of quarters" [value]="q">
+      {{ q }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+
+
+
             
           </div>
         </div>
-        <br />
         <table class="table" style="width: 90%" >
           <tr *ngIf="datas.length  > 0"
             style="text-align: center; font-weight: bold; background: #d5f1ff"
@@ -87,6 +91,9 @@
             <td *ngIf="selectedOptions === 'Q3-25'" colspan="3">{{ datas[0]?.value56}}</td>
             <td *ngIf="selectedOptions === 'Q3-25'" colspan="3">{{ datas[0]?.value59}}</td>
             <td *ngIf="selectedOptions === 'Q3-25'" colspan="3">{{ datas[0]?.value62}}</td>
+            <td *ngIf="selectedOptions === 'Q4-25'" colspan="3">{{ datas[0]?.value65}}</td>
+            <td *ngIf="selectedOptions === 'Q4-25'" colspan="3">{{ datas[0]?.value68}}</td>
+            <td *ngIf="selectedOptions === 'Q4-25'" colspan="3">{{ datas[0]?.value71}}</td>
           </tr>
           <tr
             style="
@@ -139,6 +146,7 @@
             <ng-container *ngIf="selectedOptions !== 'Q1-25' || ( j !== 1 && j !== 3 && j !== 4 && j !== 5 && j!== 6 && j!== 7 && j!== 8 && j!== 9 && j!== 10 && j !== 11  && j!== 12 && j!== 13 && j!== 14 && j!== 15 && j!==16 && j!==17 && j!==18 && j!==19 && j!==20 && j!==21 && j!==22 && j!==23 && j!==24 && j!==25 && j!==37 ) ">
             <ng-container *ngIf="selectedOptions !== 'Q2-25' || ( j !== 1 && j !== 3 && j !== 4 && j !== 5 && j!== 6 && j!== 7 && j!== 8 && j!== 9 && j!== 10 && j !== 11  && j!== 12 && j!== 13 && j!== 14 && j!== 15 && j!==16 && j!==17 && j!==18 && j!==19 && j!==20 && j!==21 && j!==22 && j!==23 && j!==24 && j!==25 && j!==37) ">
             <ng-container *ngIf="selectedOptions !== 'Q3-25' || ( j !== 1 && j !== 3 && j !== 4 && j !== 5 && j!== 6 && j!== 7 && j!== 8 && j!== 9 && j!== 10 && j !== 11  && j!== 12 && j!== 13 && j!== 14 && j!== 15 && j!==16 && j!==17 && j!==18 && j!==19 && j!==20 && j!==21 && j!==22 && j!==23 && j!==24 && j!==25 && j!==37) ">
+            <ng-container *ngIf="selectedOptions !== 'Q4-25' || ( j !== 1 && j !== 3 && j !== 4 && j !== 5 && j!== 6 && j!== 7 && j!== 8 && j!== 9 && j!== 10 && j !== 11  && j!== 12 && j!== 13 && j!== 14 && j!== 15 && j!==16 && j!==17 && j!==18 && j!==19 && j!==20 && j!==21 && j!==22 && j!==23 && j!==24 && j!==25 && j!==37) ">
 
               <td >{{i.key}}</td>
             <td *ngIf="selectedOptions === 'Q1-23'" [ngClass]="{'greenCircle':i.value1=='green','yellowCircle':i.value1=='yellow','greyCircle':i.value1=='grey','redCircle':i.value1=='red'}"></td>    
@@ -240,6 +248,18 @@
             <td *ngIf="selectedOptions === 'Q3-25'" [ngClass]="{'greenCircle':i.value97=='green','yellowCircle':i.value97=='yellow','greyCircle':i.value97=='grey','redCircle':i.value97=='red'}"></td>
             <td *ngIf="selectedOptions === 'Q3-25'" [ngClass]="{'greenCircle':i.value98=='green','yellowCircle':i.value98=='yellow','greyCircle':i.value98=='grey','redCircle':i.value98=='red'}"></td>
             <td *ngIf="selectedOptions === 'Q3-25'" [ngClass]="{'greenCircle':i.value99=='green','yellowCircle':i.value99=='yellow','greyCircle':i.value99=='grey','redCircle':i.value99=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q4-25'" [ngClass]="{'greenCircle':i.value100=='green','yellowCircle':i.value100=='yellow','greyCircle':i.value100=='grey','redCircle':i.value100=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q4-25'" [ngClass]="{'greenCircle':i.value101=='green','yellowCircle':i.value101=='yellow','greyCircle':i.value101=='grey','redCircle':i.value101=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q4-25'" [ngClass]="{'greenCircle':i.value102=='green','yellowCircle':i.value102=='yellow','greyCircle':i.value102=='grey','redCircle':i.value102=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q4-25'" [ngClass]="{'greenCircle':i.value103=='green','yellowCircle':i.value103=='yellow','greyCircle':i.value103=='grey','redCircle':i.value103=='red'}" ></td>
+            <td *ngIf="selectedOptions === 'Q4-25'" [ngClass]="{'greenCircle':i.value104=='green','yellowCircle':i.value104=='yellow','greyCircle':i.value104=='grey','redCircle':i.value104=='red'}" ></td>
+            <td *ngIf="selectedOptions === 'Q4-25'" [ngClass]="{'greenCircle':i.value105=='green','yellowCircle':i.value105=='yellow','greyCircle':i.value105=='grey','redCircle':i.value105=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q4-25'" class="center-text" >{{ i.value106 }}</td>
+            <td *ngIf="selectedOptions === 'Q4-25'" class="center-text" >{{ i.value107 }}</td>
+            <td *ngIf="selectedOptions === 'Q4-25'" class="center-text" >{{ i.value108 }}</td>
+         
+         
+         </ng-container>
           </ng-container>  
           </ng-container>
           </ng-container>
