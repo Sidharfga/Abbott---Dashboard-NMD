@@ -41,8 +41,8 @@ export class ArtmsComponent implements OnInit {
       {
           "program": "Artms_Gem_JupMktExp_Sust",
           "POValue": 113464.80,
-          "RemainingForecast": 11337.39,
-                "consumed": [ 102127.41],
+          "RemainingForecast": 2100.83,
+                "consumed": [ 111363.97],
      
           "consumedLabels": [ 'Artms_Gem_JupMktExp_Sust'],
                 "dummydata":'',

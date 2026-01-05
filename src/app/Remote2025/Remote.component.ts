@@ -37,8 +37,8 @@ export class RemoteComponent implements OnInit {
     {
       "program": "RemoteCareOperation",
       "POValue": 182984.03,
-      "RemainingForecast": 17288.92,
-            "consumed": [165695.12],
+      "RemainingForecast": 2149.84,
+            "consumed": [180834.20],
  
       "consumedLabels": ['RemoteCareOperation'],
       "dummydata":'',

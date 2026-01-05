@@ -37,8 +37,8 @@ export class NeuroComponent implements OnInit {
     {
       "program": "Neuroscience Support",
       "POValue": 60000.0,
-      "RemainingForecast": 12829.12,
-            "consumed": [47170.88],
+      "RemainingForecast": 5.40,
+            "consumed": [59994.60],
  
       "consumedLabels": ['Neuroscience Support'],
       "dummydata":'',

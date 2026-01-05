@@ -41,8 +41,8 @@ export class MobileopsherculesComponent implements OnInit {
       {
           "program": "MobileOps-Hercules",
           "POValue": 194670.00,
-          "RemainingForecast": 17718.23,
-                "consumed": [ 176951.77],
+          "RemainingForecast": 1607.15,
+                "consumed": [ 193062.85],
      
           "consumedLabels": [ 'MobileOps-Hercules'],
                 "dummydata":'',

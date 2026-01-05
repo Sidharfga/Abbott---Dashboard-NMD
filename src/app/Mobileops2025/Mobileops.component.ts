@@ -41,8 +41,8 @@ export class MobileopsComponent implements OnInit {
       {
           "program": "MobileOpsSustAndMktExp",
           "POValue": 315798.00,
-          "RemainingForecast": 28237.24,
-                "consumed": [ 287560.76],
+          "RemainingForecast": 2161.99,
+                "consumed": [ 313636.01],
      
           "consumedLabels": [ 'MobileOpsSustAndMktExp'],
                 "dummydata":'',

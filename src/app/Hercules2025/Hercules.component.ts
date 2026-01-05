@@ -37,8 +37,8 @@ export class HerculesComponent implements OnInit {
     {
       "program": " HerculesMarketExpSust ",
       "POValue": 221772.39,
-      "RemainingForecast": 19853.17,
-            "consumed": [201919.22],
+      "RemainingForecast": 1442.71,
+            "consumed": [220329.68],
  
       "consumedLabels": ['Hercules'],
       "dummydata":'',
