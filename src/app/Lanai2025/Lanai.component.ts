@@ -37,8 +37,8 @@ export class LanaiComponent implements OnInit {
     {
       "program": "Lanai",
       "POValue": 183855.00,
-      "RemainingForecast": 0,
-            "consumed": [183855.00],
+      "RemainingForecast": 18025.00,
+            "consumed": [165830.00],
  
       "consumedLabels": ['Lanai'],
       "dummydata":'',

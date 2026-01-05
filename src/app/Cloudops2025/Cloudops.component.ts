@@ -41,8 +41,8 @@ export class CloudopsComponent implements OnInit {
       {
           "program": "CloudOps-Dorin",
           "POValue": 826266.00,
-          "RemainingForecast": 2872.26,
-                "consumed": [ 823393.74],
+          "RemainingForecast": 71498.34,
+                "consumed": [ 754767.66],
      
           "consumedLabels": [ 'CloudOps-Dorin'],
                 "dummydata":'',

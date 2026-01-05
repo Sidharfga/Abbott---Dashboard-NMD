@@ -16,7 +16,7 @@ export class MetricComponent implements OnInit {
   groups: any;
   item: any;
   datas: any;
-  selectedOptions: string = 'CY-2026';
+  selectedOptions: string = 'CY-2025';
 
   constructor(private xls: XlsApi) {}
 

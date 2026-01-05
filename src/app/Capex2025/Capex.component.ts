@@ -41,8 +41,8 @@ export class CapexComponent implements OnInit {
       {
           "program": "Capex-Anitha",
           "POValue": 389343.09,
-          "RemainingForecast": 1716.16,
-                "consumed": [ 387626.93],
+          "RemainingForecast": 34161.16,
+                "consumed": [ 355181.93],
      
           "consumedLabels": [ 'Capex-Anitha'],
                 "dummydata":'',

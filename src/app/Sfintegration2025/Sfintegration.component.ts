@@ -37,8 +37,8 @@ export class SfintegrationComponent implements OnInit {
     {
       "program": "SFintegration",
       "POValue": 727759.38,
-      "RemainingForecast": 1688.48,
-            "consumed": [726070.89],
+      "RemainingForecast": 48027.97,
+            "consumed": [679731.41],
  
       "consumedLabels": ['SFintegration'],
       "dummydata":'',
