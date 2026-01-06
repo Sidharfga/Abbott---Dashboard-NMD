@@ -37,8 +37,8 @@ export class SapphireComponent implements OnInit {
     {
       "program": "Sapphire",
       "POValue": 151410.0,
-      "RemainingForecast": 13663.19,
-            "consumed": [137746.81],
+      "RemainingForecast": 1045.69,
+            "consumed": [150364.31],
  
       "consumedLabels": ['Sapphire'],
       "dummydata":'',

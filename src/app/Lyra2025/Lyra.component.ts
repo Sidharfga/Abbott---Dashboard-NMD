@@ -37,8 +37,8 @@ export class LyraComponent implements OnInit {
     {
       "program": "Lyra",
       "POValue": 782285.0,
-      "RemainingForecast": 105683.02,
-            "consumed": [676601.98],
+      "RemainingForecast": 1138.02,
+            "consumed": [781146.98],
  
       "consumedLabels": ['Lyra'],
       "dummydata":'',

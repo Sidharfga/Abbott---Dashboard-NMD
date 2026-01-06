@@ -37,8 +37,8 @@ export class IptComponent implements OnInit {
     {
       "program": "IPT",
       "POValue": 660832.80,
-      "RemainingForecast": 101403.20,
-            "consumed": [559429.60],
+      "RemainingForecast": 60954.08,
+            "consumed": [599878.72],
  
       "consumedLabels": ['IPT'],
       "dummydata":'',

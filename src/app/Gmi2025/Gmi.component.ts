@@ -37,8 +37,8 @@ export class GmiComponent implements OnInit {
     {
       "program": "GMI",
       "POValue": 160198.24,
-      "RemainingForecast": 14679.52,
-            "consumed": [145518.72],
+      "RemainingForecast": 1914.72,
+            "consumed": [158283.52],
  
       "consumedLabels": ['GMI'],
       "dummydata":'',
